@@ -1,0 +1,73 @@
+fixing the number of faces = 400
+
+non faces = 1000   -> accuracy = 83.29%
+number of correct checks: 583/700
+faces predicted correctly : 148/200
+non-faces predicted correctly : 435/500
+--------------------------------------------------------
+non faces = 100   -> accuracy = 97.2%
+number of correct checks: 243/250
+faces predicted correctly : 196/200
+non-faces predicted correctly : 47/50
+------------------------------------------------------
+non faces = 300   -> accuracy = 86%
+number of correct checks: 301/350
+faces predicted correctly : 176/200
+non-faces predicted correctly : 125/150
+--------------------------------------------------------
+non faces = 400   -> accuracy = 86.75%
+number of correct checks: 347/400
+faces predicted correctly : 172/200
+non-faces predicted correctly : 175/200
+--------------------------------------------------------
+non faces = 600   -> accuracy = 84.6%
+number of correct checks: 423/500
+faces predicted correctly : 160/200
+non-faces predicted correctly : 263/300
+--------------------------------------------------------
+non faces = 50   -> accuracy = 96.89%
+number of correct checks: 218/225
+faces predicted correctly : 195/200
+non-faces predicted correctly : 23/25
+--------------------------------------------------------
+non faces = 0   -> accuracy = 100%
+number of correct checks: 200/200
+faces predicted correctly : 200/200
+non-faces predicted correctly : 0/0
+--------------------------------------------------------
+non faces = 850   -> accuracy = 83.84%
+number of correct checks: 524/625
+faces predicted correctly : 147/200
+non-faces predicted correctly : 337/425
+*************************************************************
+Non-Faces = 0:
+
+Accuracy: 100%
+This is expected since there are no non-faces to classify, and the model correctly predicts all faces.
+Non-Faces = 50:
+
+Accuracy: 96.89%
+Still a high accuracy, but it starts to decrease as non-faces are introduced.
+Non-Faces = 100:
+
+Accuracy: 97.2%
+The accuracy is still high, but it's slightly lower than the case with 50 non-faces.
+Non-Faces = 400:
+
+Accuracy: 86.75%
+The accuracy drops significantly as the number of non-faces increases. This indicates that the model might struggle when there are more non-faces in the training data.
+Non-Faces = 1000:
+
+Accuracy: 83.29%
+The accuracy continues to decrease as the number of non-faces further increases.
+Criticisms and Considerations:
+
+Imbalance in Data:
+
+The large imbalance between face and non-face images might be affecting the model's performance. The model might become biased towards predicting faces more accurately due to the higher prevalence of face images.
+Model Generalization:
+
+The model might not be generalizing well to a diverse set of non-face images. It could be overfitting to the specific characteristics of the non-face images present in the training set.
+Model Complexity:
+
+Depending on the complexity of the model, increasing the number of non-face images might require adjusting the model architecture or training strategies to maintain good performance.
